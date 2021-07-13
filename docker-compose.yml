@@ -1,0 +1,12 @@
+version: "2"
+services:
+  reddit-wsb-crawler:
+    build:
+      # Build an image from the Dockerfile in the current directory
+      context: .
+    environment:
+      client_id: "${client_id}"
+      client_secret: "${client_secret}"
+      user_agent: "${user_agent}"
+      submissions_stream: "${submissions_stream}"
+      comments_stream: "${comments_stream}"
